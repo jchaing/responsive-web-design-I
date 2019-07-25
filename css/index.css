@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5 {
 
 .container {
   width: 920px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 header {
@@ -106,9 +106,6 @@ header nav a:hover {
 }
 
 .cta-text {
-	/* display: inline-block; */
-	/* display: flex; */
-  /* margin: 57px; */
   text-align: center;
 }
 
@@ -124,7 +121,6 @@ button {
 }
 
 .top-content {
-	/* display: inline-block; */
 	display: flex;
   margin-bottom: 45px;
 }
@@ -280,4 +276,66 @@ li {
   flex-direction: column;
 }
 
+@media (max-width: 800px) {
+  .container{
+    width: 90%
+  }
+  header {
+    width: 90%;
+    flex-direction: column-reverse;
+    height: 120px;
+  }
+  .big-img {
+    display: none;
+  }
+  .cta {
+    margin-top: 60px;
+  }
+  .top-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  .top-text-content {
+    padding: 10px;
+  }
+  .middle-img {
+    width: 100%;
+    height: auto;
+  }
+}
 
+@media (max-width: 500px) {
+  header{
+    height: 510px;
+  }
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav a {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+  header a {
+    text-align: center;
+    width: 90%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+  .cta {
+    margin-top: 450px;
+  }
+  .main-content, .top-content, .bottom-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-text-content, .bottom-text-content {
+    margin: 20px auto;
+    padding: 0;
+  }
+}

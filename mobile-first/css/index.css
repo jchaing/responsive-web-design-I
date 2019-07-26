@@ -369,7 +369,6 @@ li {
 header {
   background: rgb(12, 91, 139);
   width: 90%;
-  /* height: 120px; */
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -385,7 +384,6 @@ header nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 header nav a {
@@ -485,30 +483,58 @@ footer {
 }
 
 @media (min-width: 501px) {
-  /* .container{
-    width: 90%
-  } */
   header {
-    /* width: 90%; */
-    /* flex-direction: column-reverse; */
     height: 120px;
   }
-  /* .big-img {
-    display: none;
-  } */
+  header nav {
+    flex-direction: row;
+  }
+  header nav a {
+    margin: 0 20px;
+    padding: 5px;
+    border-bottom: 0;
+  }
+  header a {
+    margin-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0;
+  }
   .cta {
     margin-top: 60px;
   }
   .top-content {
-    /* display: flex; */
     flex-direction: row;
     justify-content: space-around;
   }
   .top-text-content {
     padding: 10px;
+    margin: 0;
   }
-  /* .middle-img {
+  .bottom-content {
+    flex-direction: row;
+  }
+  .bottom-text-content {
+    margin: 0;
+    padding: 10px;
+  }
+  .middle-img {
     width: 100%;
     height: auto;
-  } */
+  }
+  .maint-content {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 801px) {
+  header {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .big-img {
+    display: initial;
+  }
 }

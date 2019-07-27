@@ -4,68 +4,154 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-
+/*
 .container {
   width: 920px;
   margin: 0 auto;
@@ -250,7 +336,6 @@ li {
   flex-direction: column;
   justify-content: space-between;
   border-bottom: 2px solid black;
-  /* border: 1px solid red; */
 }
 
 .product-block {
@@ -274,102 +359,182 @@ li {
   width: 440px;
   display: flex;
   flex-direction: column;
+} */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
-@media (max-width: 800px) {
-  .container{
-    width: 90%
-  }
+header {
+  background: rgb(12, 91, 139);
+  width: 90%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  height: 510px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav a {
+  text-align: center;
+  margin: 0px 20px 20px 20px;
+  /* margin-bottom: 20px; */
+  padding: 5px 5px 20px 5px;
+  /* padding-bottom: 20px; */
+  text-decoration: none;
+  color: lightgray;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  border-bottom: 1px solid black;
+}
+
+header nav a:hover {
+  color: yellow;
+}
+
+header a {
+  text-align: center;
+  width: 90%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+
+.big-img {
+  display: none;
+}
+
+.cta {
+  margin: 450px auto 30px auto;
+  padding: 120px 30px 70px 30px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cta-text {
+  text-align: center;
+}
+
+.cta-text h1 {
+  font-size: 75px;
+}
+
+button {
+  font-size: 18px;
+  padding: 5px 40px;
+  background-color: transparent;
+  border-color: black;
+}
+
+.main-content,
+.top-content, .middle-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+
+.top-content {
+  justify-content: space-around;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding-bottom: 35px;
+}
+
+.top-text-content,
+.bottom-text-content {
+  margin: 20px auto;
+  padding: 0;
+}
+
+.middle-img {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  margin: 40px 0;
+}
+
+.contact p {
+  padding: 10px 0;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+@media (min-width: 501px) {
   header {
-    width: 90%;
-    flex-direction: column-reverse;
     height: 120px;
   }
-  .big-img {
-    display: none;
+  header nav {
+    flex-direction: row;
+  }
+  header nav a {
+    margin: 0 20px;
+    padding: 5px;
+    border-bottom: 0;
+  }
+  header a {
+    margin-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0;
   }
   .cta {
     margin-top: 60px;
   }
   .top-content {
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
   }
   .top-text-content {
+    padding: 10px;
+    margin: 0;
+  }
+  .bottom-content {
+    flex-direction: row;
+  }
+  .bottom-text-content {
+    margin: 0;
     padding: 10px;
   }
   .middle-img {
     width: 100%;
     height: auto;
   }
-  .services-info {
-    margin-top: 150px;
-    height: 325px;
-  }
-  .services-header-img {
-    width: 100%;
-  }
-  .services-text {
-    margin-bottom: 200px;
-  }
-  .service-block {
-    width: 48%;
+  .maint-content {
+    flex-direction: row;
   }
 }
 
-@media (max-width: 500px) {
-  header{
-    height: 510px;
-  }
-  header nav {
-    width: 100%;
+@media (min-width: 801px) {
+  header {
+    height: 80px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-  }
-  header nav a {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid black;
-  }
-  header a {
-    text-align: center;
-    width: 90%;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid black;
-  }
-  .cta {
-    margin-top: 450px;
-  }
-  .main-content, .top-content, .bottom-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .top-text-content, .bottom-text-content {
-    margin: 20px auto;
-    padding: 0;
-  }
-  .services-info {
-    margin-top: 540px;
-  }
-  .services-content {
-    height: 100%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  .service-block {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-  .services-faq {
-    height: 100%;
-    flex-direction: column-reverse;
     justify-content: space-around;
-    align-content: space-around;
   }
-  .services-faq-block {
-    margin-bottom: 50px;
+  .big-img {
+    display: initial;
   }
 }

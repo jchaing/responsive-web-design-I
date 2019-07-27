@@ -302,6 +302,19 @@ li {
     width: 100%;
     height: auto;
   }
+  .services-info {
+    margin-top: 150px;
+    height: 325px;
+  }
+  .services-header-img {
+    width: 100%;
+  }
+  .services-text {
+    margin-bottom: 200px;
+  }
+  .service-block {
+    width: 48%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -337,5 +350,26 @@ li {
   .top-text-content, .bottom-text-content {
     margin: 20px auto;
     padding: 0;
+  }
+  .services-info {
+    margin-top: 540px;
+  }
+  .services-content {
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .service-block {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .services-faq {
+    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  .services-faq-block {
+    margin-bottom: 50px;
   }
 }
